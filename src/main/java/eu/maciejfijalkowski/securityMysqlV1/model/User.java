@@ -1,12 +1,18 @@
 package eu.maciejfijalkowski.securityMysqlV1.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "user")
+@NoArgsConstructor
+@Getter
+@Setter
 @Data
 public class User {
     @Id
