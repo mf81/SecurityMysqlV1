@@ -34,7 +34,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("**/admin/**").authenticated()
                 .anyRequest().permitAll()
-                .and().formLogin().permitAll();
+                .and()
+                .formLogin().loginPage("/login").permitAll()
+                .and()
+                .logout().permitAll();
+        http.exceptionHandling().accessDeniedPage("/403");
     }
 
     private PasswordEncoder getPasswordEncoder() {

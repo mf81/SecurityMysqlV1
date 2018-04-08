@@ -23,5 +23,10 @@ public class AdminController {
         return "userindex";
     }
 
+    @GetMapping("/login")
+    public String userLogin(){
+        return "login";
+    }
+
 
 }

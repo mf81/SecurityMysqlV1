@@ -9,7 +9,13 @@
 <h1>Security fron DB</h1>
 
 <a th:href="@{/user}">Part for user - don't need to login</a>
+<br />
 <a th:href="@{/admin}">Part for admin - need to login</a>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out" />
+</form>
 
 </body>
 </html>
